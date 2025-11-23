@@ -181,6 +181,12 @@ a {
 
 /* #region slogan */
 
+.slogan-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .page-title {
   max-width: 496px;
   font-weight: 700;
@@ -202,18 +208,12 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-1.jpg);
+    url(../images/slogan/slogan-desktop.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.slogan-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 .primary-btn {
@@ -231,6 +231,7 @@ a {
   border: none;
   border-radius: 4px;
   background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 

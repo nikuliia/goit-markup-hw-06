@@ -23,6 +23,7 @@ h6 {
 
 p {
   margin: 0;
+  color: #434455;
 }
 
 ul {
@@ -333,7 +334,7 @@ button {
   color: #2e2f42;
 }
 
-.mobile-nav-link.mobile-first-link {
+.mobile-nav-link.current {
   color: #404bbf;
 }
 
@@ -430,8 +431,6 @@ button {
 }
 
 .primary-btn {
-  display: block;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -458,7 +457,7 @@ button {
   background-position: center center;
   background-size: cover;
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0 auto 96px auto;
 }
 
 @media screen and (min-resolution: 192dpi) {
@@ -519,3 +518,104 @@ button {
 }
 
 /* #endregion slogan */
+
+/* #region benefits */
+
+.icons {
+  display: none;
+}
+
+.benefits-list {
+  max-width: 288px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  margin-bottom: 96px;
+}
+
+.benefits-list .list-item {
+  width: 100%;
+}
+
+.list-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-prph {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    max-width: 736px;
+    gap: 24px;
+  }
+
+  .benefits-list .list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .list-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-benefits {
+    padding: 120px 0 120px;
+    /* padding-top: 120px;
+  padding-bottom: 120px; */
+  }
+
+  .benefits-list {
+    max-width: 1128px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 120px;
+  }
+
+  .list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .section-prph {
+    font-weight: 400;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    padding: 24px 0;
+    margin-bottom: 8px;
+    background-color: #f4f4fd;
+    height: 112px;
+  }
+}
+/* #endregion benefits */
+
+/* #region team */
+/* #endregion team */
+
+/* #region portfolio */
+/* #endregion portfolio */
+
+/* #region footer */
+/* #endregion footer */
+
+/* #region backdrop */
+/* #endregion backdrop */

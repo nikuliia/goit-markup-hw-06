@@ -633,7 +633,7 @@ button {
 .list-item.team-list-item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  margin-bottom: 72px;
+  max-width: 264px;
 }
 
 .list-item.team-list-item:last-child {
@@ -641,6 +641,7 @@ button {
 }
 
 .list-title {
+  text-align: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.12;
@@ -674,13 +675,25 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .section-team {
+    /* max-width: 768px; */
+    margin-bottom: 96px;
+    padding: 96px 0 96px;
+    background-color: #f4f4fd;
+    margin: 0 auto;
+  }
   .team-list {
+    max-width: 520px;
     gap: 72px 24px;
   }
 }
 
 .list-item.team-list-item {
   flex-basis: calc((100% - 24px) / 2);
+}
+
+.team-list {
+  gap: 64px 24px;
 }
 
 @media screen and (min-width: 1158px) {

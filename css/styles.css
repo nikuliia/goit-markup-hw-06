@@ -851,17 +851,127 @@ button {
   max-width: 288px;
 }
 
-.subscription-label .subscribe-field {
+.logo {
   display: block;
-  max-width: 288px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.web-footer {
+  color: #f4f4fd;
+}
+
+.footer-prph {
+  font-weight: 400;
+  font-size: 16px;
+  color: #f4f4fd;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.icons-list-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.icons-list-footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.icons-list-footer .socials-svg {
+  fill: #f4f4fd;
+}
+
+.subscription-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.subscribe-field {
+  width: 288px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.subscribe-field::placeholder {
+  color: #fff;
+}
+
+.btn-send {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+}
+
+.icon-send {
+  fill: #ffffff;
+  margin-left: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 72px;
-    row-gap: 24px;
+    row-gap: 72px;
+    justify-content: flex-start;
+    margin-left: 108px;
+  }
+
+  .logo {
+    text-align: left;
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+
+  .logo-container,
+  .socials-container {
+    margin-right: 0;
+  }
+
+  .subscribe-field {
+    width: 264px;
   }
 }
 
@@ -874,63 +984,18 @@ button {
   .footer-container {
     display: flex;
     align-items: baseline;
+    flex-wrap: nowrap;
+    margin: auto;
   }
 
   .logo-container {
     margin-right: 120px;
+    max-width: 264px;
   }
 
   .socials-container {
     margin-right: 80px;
     margin-bottom: 32px;
-  }
-
-  .footer-logo {
-    display: inline-block;
-    margin-bottom: 16px;
-  }
-
-  .web-footer {
-    color: #f4f4fd;
-  }
-
-  .footer-prph {
-    font-weight: 400;
-    font-size: 16px;
-    color: #f4f4fd;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    max-width: 264px;
-  }
-
-  .footer-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #fff;
-    margin-bottom: 16px;
-  }
-
-  .icons-list-footer {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-shrink: 0;
-  }
-
-  .icons-list-footer .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-  }
-
-  .icons-list-footer .socials-svg {
-    fill: #f4f4fd;
   }
 
   .icons-list-footer .social-links {
@@ -940,52 +1005,6 @@ button {
   .icons-list-footer .social-links:hover,
   .icons-list-footer .social-links:focus {
     background-color: #31d0aa;
-  }
-
-  .subscription-form {
-    display: flex;
-    gap: 24px;
-  }
-
-  .subscribe-field {
-    width: 264px;
-    height: 40px;
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    font-size: 12px;
-    line-height: 2;
-    letter-spacing: 0.04em;
-    padding-left: 16px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    color: #fff;
-  }
-
-  .subscribe-field::placeholder {
-    color: #fff;
-  }
-
-  .btn-send {
-    min-width: 165px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #4d5ae5;
-    border: none;
-    border-radius: 4px;
-  }
-
-  .icon-send {
-    fill: #ffffff;
-    margin-left: 16px;
   }
 }
 /* #endregion footer */

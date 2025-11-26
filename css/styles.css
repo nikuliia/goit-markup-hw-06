@@ -1015,4 +1015,233 @@ button {
 /* #endregion footer */
 
 /* #region backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 288px;
+  min-height: 623px;
+  transform: translate(-50%, -50%);
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 16px 24px 16px;
+}
+
+.backdrop:not(.is-open) .modal-window {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.close-svg {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:focus .close-svg {
+  fill: #fff;
+}
+
+.modal-window .popup-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.form-containers {
+  margin-bottom: 8px;
+}
+
+.privacy-checkbox {
+  margin-bottom: 24px;
+}
+
+.comment-box {
+  margin-bottom: 16px;
+}
+
+.comment {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment:focus {
+  border-color: #4d5ae5;
+}
+
+.label-field {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+
+.privacy-checkbox .label-field {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgb(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus {
+  border-color: #4d5ae5;
+}
+
+.svg-input {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus + .svg-input {
+  fill: #4d5ae5;
+}
+
+.checked-element {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.privacy-field:checked + .label-field .checked-element {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+.privacy-policy {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+.modal-btn .form-btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .btn-close:hover {
+    background-color: #404bbf;
+    border: none;
+  }
+
+  .btn-close:hover .close-svg {
+    fill: #fff;
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  .input-field:focus {
+    border-color: #4d5ae5;
+  }
+
+  .input-field:focus + .svg-input {
+    fill: #4d5ae5;
+  }
+
+  .comment:hover {
+    border-color: #4d5ae5;
+  }
+}
 /* #endregion backdrop */

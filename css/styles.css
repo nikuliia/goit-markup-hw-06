@@ -985,7 +985,7 @@ button {
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
-    margin: auto;
+    gap: 0;
   }
 
   .logo-container {
@@ -1005,6 +1005,11 @@ button {
   .icons-list-footer .social-links:hover,
   .icons-list-footer .social-links:focus {
     background-color: #31d0aa;
+  }
+
+  .subscription-form {
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 /* #endregion footer */

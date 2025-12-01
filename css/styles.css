@@ -430,6 +430,7 @@ button {
     border: none;
     border-radius: 4px;
     background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   }
 }
@@ -490,6 +491,11 @@ button {
 
   .page-title {
     margin-bottom: 48px;
+  }
+
+  .primary-btn:hover,
+  .primary-btn:focus {
+    background-color: #404bbf;
   }
 }
 
@@ -677,7 +683,6 @@ button {
 
 @media screen and (min-width: 1158px) {
   .section-team {
-    max-width: 1440px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -844,14 +849,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 72px;
+  gap: 72px 24px;
 }
 
 .logo-container {
   max-width: 288px;
 }
 
-.logo {
+.logo-container .logo {
   display: block;
   text-align: center;
   margin-bottom: 16px;
@@ -939,6 +944,7 @@ button {
   color: #ffffff;
   cursor: pointer;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   border-radius: 4px;
 }
@@ -949,15 +955,16 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .footer .container {
+    max-width: 552px;
+  }
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 72px;
     justify-content: flex-start;
-    margin-left: 108px;
   }
 
-  .logo {
+  .logo-container .logo {
     text-align: left;
   }
 
@@ -965,9 +972,12 @@ button {
     text-align: left;
   }
 
-  .logo-container,
-  .socials-container {
-    margin-right: 0;
+  .logo-container {
+    max-width: 264px;
+  }
+
+  .subscription-form {
+    gap: 24px;
   }
 
   .subscribe-field {
@@ -976,6 +986,10 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
+  .footer .container {
+    /* max-width: 0; */
+  }
+
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -986,6 +1000,7 @@ button {
     align-items: baseline;
     flex-wrap: nowrap;
     gap: 0;
+    /* margin-left: 0; */
   }
 
   .logo-container {
@@ -1010,6 +1025,11 @@ button {
   .subscription-form {
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+
+  .btn-send:hover,
+  .btn-send:focus {
+    background-color: #404bbf;
   }
 }
 /* #endregion footer */

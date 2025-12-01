@@ -958,6 +958,7 @@ button {
   .footer .container {
     max-width: 552px;
   }
+
   .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -987,7 +988,7 @@ button {
 
 @media screen and (min-width: 1158px) {
   .footer .container {
-    /* max-width: 0; */
+    max-width: 1158px;
   }
 
   .footer {
@@ -1000,7 +1001,6 @@ button {
     align-items: baseline;
     flex-wrap: nowrap;
     gap: 0;
-    /* margin-left: 0; */
   }
 
   .logo-container {
